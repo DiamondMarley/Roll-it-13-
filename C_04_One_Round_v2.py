@@ -19,6 +19,12 @@ def initial_points(which_player):
     return total , double
 
 
+def make_statement(statement, decoration):
+    """Adds emoji / additional characters to the start and end of headings"""
+
+    ends = decoration * 3
+    print(f"\n{ends} {statement} {ends}")
+
 # Main starts here...
 
 
@@ -101,7 +107,7 @@ if winner == "user" and double_user == "yes":
     user_points = user_points * 2
 
 # Output round results
-print("\nRound Results")
+make_statement("Round Results", "*")
 print(f"User Points: {user_points} | Computer Points: {comp_points}")
 print(round_feedback)
 print()
